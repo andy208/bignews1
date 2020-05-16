@@ -17,5 +17,13 @@ $(function () {
             }
         }
     })
+
+    //给退出按钮注册事件
+    $('.logout').on('click', function () {
+        //退出意味着删除本地存储中的token
+        localStorage.removeItem('token')
+        //跳回到登录页面
+        window.location.href = './login.html'
+    })
 })
 
